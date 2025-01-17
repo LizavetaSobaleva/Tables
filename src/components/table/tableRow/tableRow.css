@@ -1,0 +1,27 @@
+/* Общие стили для ячеек */
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Стили для заголовков */
+th {
+  position: sticky;
+  top: 0;
+  background-color: #f9f9f9;
+  font-weight: 600;
+}
+
+/* Фиксированная колонка */
+.fixed-column {
+  position: sticky;
+  right: 0;
+  background-color: #f4f2f2;
+  z-index: 2;
+  border-left: 1px solid #ddd;
+}

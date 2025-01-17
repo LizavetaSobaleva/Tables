@@ -1,0 +1,21 @@
+/* Контейнер таблицы */
+.table-container {
+  height: 100vh;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 8px;
+  position: relative;
+  transition: all 1s ease;
+}
+
+.table-container.blotterOpen {
+  height: 50vh;
+}
+
+/* Таблица */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto; /* Колонки растягиваются по содержимому */
+  border: 1px solid #f4f2f2;
+}
