@@ -2,19 +2,50 @@
 import TableRow from "./tableRow/TableRow";
 import "./table.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectRow } from "../../store";
+import { selectRow, addToBlotter } from "../../store";
+import { useState } from "react";
 
 const Table = ({ data }) => {
   const isBlotterOpen = useSelector((state) => state.isBlotterOpen);
-  const selectedRow = useSelector((state) => state.selectedRow); // Получение выбранной строки из состояния
+  const selectedRow = useSelector((state) => state.selectedRow);
   const dispatch = useDispatch();
+  const [contextMenu, setContextMenu] = useState({
+    visible: false,
+    x: 0,
+    y: 0,
+    row: null,
+  });
 
   const handleDragStart = (e, row) => {
-    e.dataTransfer.setData("text/plain", JSON.stringify(row)); // Передача данных строки
+    e.dataTransfer.setData("text/plain", JSON.stringify(row));
+  };
+
+  const handleContextMenu = (e, row) => {
+    e.preventDefault();
+    setContextMenu({
+      visible: true,
+      x: e.clientX,
+      y: e.clientY,
+      row,
+    });
+  };
+
+  const handleCopyToBlotter = () => {
+    if (contextMenu.row) {
+      dispatch(addToBlotter(contextMenu.row));
+    }
+    setContextMenu({ ...contextMenu, visible: false });
+  };
+
+  const handleCloseContextMenu = () => {
+    setContextMenu({ ...contextMenu, visible: false });
   };
 
   return (
-    <div className={`table-container ${isBlotterOpen ? "blotterOpen" : ""}`}>
+    <div
+      className={`table-container ${isBlotterOpen ? "blotterOpen" : ""}`}
+      onClick={handleCloseContextMenu}
+    >
       <table>
         <thead>
           <TableRow rowData={data[0]} isHeader />
@@ -24,8 +55,9 @@ const Table = ({ data }) => {
             <tr
               key={index}
               draggable
-              onDragStart={(e) => handleDragStart(e, row)} // Устанавливаем обработчик dragstart
-              onClick={() => dispatch(selectRow(row))} // Обрабатываем выбор строки
+              onDragStart={(e) => handleDragStart(e, row)}
+              onClick={() => dispatch(selectRow(row))}
+              onContextMenu={(e) => handleContextMenu(e, row)}
               className={selectedRow === row ? "selected-row" : ""}
             >
               {row.map((cell, i) => (
@@ -40,6 +72,14 @@ const Table = ({ data }) => {
           ))}
         </tbody>
       </table>
+      {contextMenu.visible && (
+        <div
+          className="context-menu"
+          style={{ top: contextMenu.y, left: contextMenu.x }}
+        >
+          <button onClick={handleCopyToBlotter}>Add to Blotter</button>
+        </div>
+      )}
     </div>
   );
 };

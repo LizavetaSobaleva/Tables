@@ -19,10 +19,16 @@ const appSlice = createSlice({
     selectRow(state, action) {
       state.selectedRow = action.payload;
     },
+    removeFromBlotter(state, action) {
+      state.blotterData = state.blotterData.filter(
+        (_, index) => index !== action.payload
+      );
+    },
   },
 });
 
-export const { toggleBlotter, addToBlotter, selectRow } = appSlice.actions;
+export const { toggleBlotter, addToBlotter, selectRow, removeFromBlotter } =
+  appSlice.actions;
 
 export const store = configureStore({
   reducer: appSlice.reducer,

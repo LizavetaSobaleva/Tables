@@ -1,14 +1,27 @@
 .blotter {
-  width: 100vw;
-  height: 40vh;
+  height: 0;
+  width: 0;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  position: relative;
+  position: fixed;
   bottom: 0;
-  margin-bottom: 20px;
+  right: 0;
   background-color: #eaeaed;
   border: 1px solid #eaeaed;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.blotter.blotter-open {
+  height: 40vh;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .blotter_header {
@@ -18,16 +31,25 @@
   align-items: center;
 }
 
+.blotter_title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
 .hideBtn {
-  height: 20px;
-  width: 20px;
-  margin: 4px;
-  background-color: gold;
-  border-radius: 50%;
+  height: auto;
+  width: auto;
+  padding: 4px 16px;
+  position: relative;
+  top: -4px;
+  color: #fbfbfb;
+  background-color: #4364e7;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .blotter_content {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   margin: 8px;
   overflow: auto;
@@ -36,16 +58,25 @@
 .blotter_content table {
   width: 100%;
   border-collapse: collapse;
+  position: relative;
 }
 
 .blotter_content th,
 .blotter_content td {
-  border: 1px solid #ddd;
   padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #fbfbfb;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.blotter_content tr:hover {
-  background-color: #f1f1f1;
+.fixed-column {
+  position: sticky;
+  right: 0;
+  z-index: 2;
+  background-color: #f4f2f2;
 }
 
 .blotterBtn {
@@ -55,11 +86,14 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: gold;
+  color: #fbfbfb;
+  background-color: #4364e7;
   border-radius: 8px 0 0 0;
+  transition: all 0.3s linear;
+  cursor: pointer;
 }
