@@ -1,8 +1,12 @@
 import { useState } from "react";
 import "./blotter.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToBlotter, selectRow, toggleBlotter } from "../../store";
-import { removeFromBlotter } from "../../store";
+import {
+  addToBlotter,
+  selectRow,
+  toggleBlotter,
+  removeFromBlotter,
+} from "../../store";
 
 const Blotter = () => {
   const isBlotterOpen = useSelector((state) => state.isBlotterOpen);
@@ -39,25 +43,28 @@ const Blotter = () => {
     <>
       {!isBlotterOpen ? (
         <div
-          className={`blotterBtn ${isBlotterOpen ? "blotter-open" : ""}`}
+          className={`blotterButton ${isBlotterOpen ? "blotter-open" : ""}`}
           onClick={() => dispatch(toggleBlotter())}
         >
-          <div className="blotter_title">Blotter</div>
+          <div className="blotterTitle">Blotter</div>
         </div>
       ) : (
         <div
-          className={`blotter ${isBlotterOpen ? "blotter-open" : ""}`}
+          className={`blotter ${isBlotterOpen ? "blotterOpen" : ""}`}
           onDrop={handleDrop}
           onDragOver={handleDragOver}
           onClick={handleCloseContextMenu}
         >
-          <div className="blotter_header">
-            <div className="blotter_title">Blotter</div>
-            <div className="hideBtn" onClick={() => dispatch(toggleBlotter())}>
+          <div className="blotterHeader">
+            <div className="blotterTitle">Blotter</div>
+            <div
+              className="hideButton"
+              onClick={() => dispatch(toggleBlotter())}
+            >
               _
             </div>
           </div>
-          <div className="blotter_content">
+          <div className="blotterContent">
             <table>
               <thead></thead>
               <tbody>
@@ -83,7 +90,7 @@ const Blotter = () => {
 
           {contextMenu && (
             <div
-              className="context-menu"
+              className="contextMenu"
               style={{ top: contextMenu.y, left: contextMenu.x }}
             >
               <button onClick={() => handleDelete(contextMenu.rowIndex)}>

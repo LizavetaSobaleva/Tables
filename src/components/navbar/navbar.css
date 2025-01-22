@@ -1,8 +1,18 @@
 .navbar {
   width: 100vw;
   height: 60px;
+  padding: 4px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eaeaed;
+}
+
+.navbarMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
