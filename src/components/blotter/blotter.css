@@ -105,7 +105,7 @@
 .context-menu {
   min-width: 60px;
   height: auto;
-  position: fixed;
+  position: sticky;
   z-index: 1000;
   background-color: white;
   border: 1px solid #dbdada;

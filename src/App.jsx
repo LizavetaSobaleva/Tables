@@ -1,14 +1,15 @@
 import "./App.css";
 import Blotter from "./components/blotter/Blotter";
-import Navbar from "./components/Navbar/Navbar";
-import Table from "./components/table/Table";
+import Sidebar from "./components/sidebar/Sidebar";
+
+import TablePage from "./components/TablePage/TablePage";
 import data from "./data";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Table data={data} />
+      <Sidebar />
+      <TablePage data={data} />
       <Blotter />
     </>
   );

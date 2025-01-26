@@ -7,12 +7,7 @@ const TableRow = ({ rowData, isHeader }) => {
   return (
     <tr>
       {rowData.map((cell, index) => (
-        <Tag
-          key={index}
-          className={index === rowData.length - 1 ? "fixed-column" : ""}
-        >
-          {cell}
-        </Tag>
+        <Tag key={index}>{cell}</Tag>
       ))}
     </tr>
   );

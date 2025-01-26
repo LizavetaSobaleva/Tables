@@ -1,0 +1,20 @@
+.sidebar {
+  width: 56px;
+  height: 100%;
+  padding: 12px 4px;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #fafafa;
+  border-right: 1px solid #eaeaed;
+}
+
+.sidebarMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,10 +1,10 @@
 /* Контейнер таблицы */
 .table-container {
-  height: 100vh;
+  width: 96vw;
   overflow-x: auto;
-  max-width: 100%;
-  margin: 8px;
   position: relative;
+  border: 1px solid #efeff7;
+  border-radius: 8px;
   transition: all 0.3s linear;
 }
 
@@ -17,5 +17,5 @@ table {
   border-collapse: collapse;
   width: 100%;
   table-layout: auto; /* Колонки растягиваются по содержимому */
-  border: 1px solid #f4f2f2;
+  background-color: #fcfcfc;
 }

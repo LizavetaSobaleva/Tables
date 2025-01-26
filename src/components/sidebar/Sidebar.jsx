@@ -1,20 +1,19 @@
 import Avatar from "../avatar/Avatar";
-import "./navbar.css";
+import "./sidebar.css";
 
 const user = {
   imageUrl: null,
   fullName: "John Doe",
 };
 
-const Navbar = () => {
+const Sidebar = () => {
   return (
-    <div className="navbar">
-      <div className="navbarLogo">Logo</div>
-      <div className="navbarMenu">
+    <div className="sidebar">
+      <div className="sidebarMenu">
         <Avatar imageUrl={user.imageUrl} fullName={user.fullName} />
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export default Sidebar;
