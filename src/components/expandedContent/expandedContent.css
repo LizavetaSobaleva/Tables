@@ -1,0 +1,94 @@
+.expanded-content {
+  background-color: #f4f4f7;
+  text-align: left;
+  animation: slideDown 0.2s ease forwards;
+}
+
+.expanded-content-row.closing .expanded-content {
+  animation: slideUp 0.2s ease forwards;
+}
+
+.content-wrapper {
+  padding: 12px;
+}
+
+.nested-table-container {
+  margin: 10px 0;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.expanded-content-row.closing .nested-table-container {
+  animation: fadeOut 0.2s ease forwards;
+}
+
+/* Стили для вложенной таблицы */
+.nested-table-container .table-container {
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  background-color: #fafafa;
+  box-shadow: none;
+  border-radius: 12px;
+}
+
+.nested-table-container table {
+  background-color: transparent;
+  margin: 0;
+}
+
+.nested-table-container table .expand-cell,
+.nested-table-container table .expand-header {
+  display: none;
+}
+
+.nested-table-container th {
+  background-color: #f0f0f7;
+  font-weight: 500;
+}
+
+.nested-table-container tr:nth-child(even) {
+  background-color: rgba(245, 245, 251, 0.5);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}

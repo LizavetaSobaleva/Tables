@@ -21,17 +21,13 @@ const Table = ({ data }) => {
         </thead>
         <tbody>
           {data.slice(1).map((row, index) => (
-            <tr
+            <TableRow
               key={index}
-              draggable
+              rowData={row}
               onDragStart={(e) => handleDragStart(e, row)}
               onClick={() => dispatch(selectRow(row))}
-              className={selectedRow === row ? "selected-row" : ""}
-            >
-              {row.map((cell, i) => (
-                <td key={i}>{cell}</td>
-              ))}
-            </tr>
+              isSelected={selectedRow === row}
+            />
           ))}
         </tbody>
       </table>

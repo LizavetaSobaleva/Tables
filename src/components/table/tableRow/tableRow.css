@@ -1,23 +1,60 @@
-/* Общие стили для ячеек */
 th,
 td {
   padding: 12px 28px;
-  /* border: 1px solid #eaeaed; */
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Стили для заголовков */
 th {
   position: sticky;
   top: 0;
-  background-color: #ebebf4;
-  color: #646477;
-  border-color: #efeff7;
+  font-weight: 600;
+  color: #3f3f40;
+  background-color: #fcfcfc;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
   background-color: #f5f5fb;
+}
+
+.expand-cell {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  align-items: center;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.expand-button:hover {
+  background-color: #f0f0f0;
+  color: #4364e7;
+}
+
+.expand-button:focus {
+  outline: none;
+}
+
+.expand-icon {
+  display: inline-block;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+tr.expanded-row {
+  background-color: #f5f5fb !important;
+  transition: background-color 0.3s ease;
 }

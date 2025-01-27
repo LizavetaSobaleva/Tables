@@ -10,11 +10,10 @@ const data = [
     "Header 8",
     "Header 9",
     "Header 10",
-    "Fixed Column",
   ],
   [
     "Row 1, Col 1",
-    "Short",
+    "match",
     "Row 1, Col 3",
     "This is a longer text in Col 4",
     "Col 5",
@@ -23,11 +22,10 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
-    "Shorter",
+    "unmatch",
     "Col 3",
     "Row 2, Col 4",
     "Another example of longer text in Col 5",
@@ -36,7 +34,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -49,7 +46,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -62,7 +58,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
   [
     "Row 1, Col 1",
@@ -75,7 +70,6 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
@@ -88,7 +82,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -101,7 +94,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -114,7 +106,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
   [
     "Row 1, Col 1",
@@ -127,7 +118,6 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
@@ -140,7 +130,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -153,7 +142,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -166,7 +154,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
   [
     "Row 1, Col 1",
@@ -179,7 +166,6 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
@@ -192,7 +178,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -205,7 +190,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -218,7 +202,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
   [
     "Row 1, Col 1",
@@ -231,7 +214,6 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
@@ -244,7 +226,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -257,7 +238,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -270,7 +250,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
   [
     "Row 1, Col 1",
@@ -283,7 +262,6 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
@@ -296,7 +274,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -309,7 +286,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -322,7 +298,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
   [
     "Row 1, Col 1",
@@ -335,7 +310,6 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
@@ -348,7 +322,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -361,7 +334,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -374,7 +346,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
   [
     "Row 1, Col 1",
@@ -387,7 +358,6 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
@@ -400,7 +370,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -413,7 +382,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -426,7 +394,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
   [
     "Row 1, Col 1",
@@ -439,7 +406,6 @@ const data = [
     "Row 1, Col 8",
     "Short",
     "Another long text in Col 10",
-    "Fixed 1",
   ],
   [
     "Row 2, Col 1 with longer text",
@@ -452,7 +418,6 @@ const data = [
     "Text",
     "Very long text in Col 9, which is much longer than the others",
     "Short text",
-    "Fixed 2",
   ],
   [
     "Short text",
@@ -465,7 +430,6 @@ const data = [
     "Row 3, Col 8",
     "Col 9",
     "Longest text in Col 10 so far",
-    "Fixed 3",
   ],
   [
     "Col 1",
@@ -478,7 +442,6 @@ const data = [
     "Col 8",
     "Col 9",
     "Row 4, Col 10",
-    "Fixed 4",
   ],
 ];
 
